@@ -193,19 +193,27 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
                 <ul className="space-y-3">
                   <li className="flex gap-3 text-slate-300">
                     <span className="material-symbols-outlined text-[#d4af37] text-sm">circle</span>
-                    <span>P1 chọn phong bì, P2 quyết định Cướp hoặc Bỏ.</span>
+                    <span>P1 chọn phong bì, P2 quyết định <strong className="text-[#ea2a33]">Cướp</strong> hoặc <strong className="text-emerald-400">Bỏ</strong>.</span>
                   </li>
                   <li className="flex gap-3 text-slate-300">
                     <span className="material-symbols-outlined text-[#d4af37] text-sm">circle</span>
-                    <span>Cướp tốn 1 token và bị -2 điểm phí cướp.</span>
+                    <span>Cướp tốn 1 token và bị <strong className="text-red-400">−2 điểm</strong> phí cướp.</span>
                   </li>
                   <li className="flex gap-3 text-slate-300">
                     <span className="material-symbols-outlined text-[#d4af37] text-sm">circle</span>
-                    <span>Không được cướp quá 2 lượt liên tiếp.</span>
+                    <span>Không được cướp quá <strong>2 lượt liên tiếp</strong>.</span>
                   </li>
                   <li className="flex gap-3 text-slate-300">
                     <span className="material-symbols-outlined text-[#d4af37] text-sm">circle</span>
-                    <span>Cướp vali câu hỏi & sai → phạt thêm -3 điểm.</span>
+                    <span>Câu hỏi: đúng = cộng điểm, sai = 0 điểm.</span>
+                  </li>
+                  <li className="flex gap-3 text-slate-300">
+                    <span className="material-symbols-outlined text-[#d4af37] text-sm">circle</span>
+                    <span>🛡️ <strong className="text-blue-400">Lá chắn</strong>: chặn 1 lần vali phạt trực tiếp.</span>
+                  </li>
+                  <li className="flex gap-3 text-slate-300">
+                    <span className="material-symbols-outlined text-[#d4af37] text-sm">circle</span>
+                    <span>⭐ <strong className="text-amber-400">Ngôi sao hi vọng</strong>: P1 bật trước khi chọn vali → <strong>nhân đôi</strong> mọi điểm (đúng ×2, sai −×2). P2 cướp vẫn chịu hiệu ứng.</span>
                   </li>
                 </ul>
               </div>
