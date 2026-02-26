@@ -68,11 +68,12 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 /**
- * Generate 20 vali with shuffled order and IDs 1-20.
+ * Generate 20 vali with FIXED order and IDs 1-20.
+ * Không shuffle — để quản trò chuẩn bị phong bì cố định.
  * All start with status = 'hidden'.
  */
 export function generateValis(): Vali[] {
-  const defs = shuffle(createValiDefinitions());
+  const defs = createValiDefinitions();
   return defs.map((def, index) => ({
     ...def,
     id: index + 1,
