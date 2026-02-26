@@ -44,7 +44,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex flex-col overflow-hidden"
+    <div className="relative min-h-screen w-full flex flex-col overflow-auto"
       style={{
         backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(234, 42, 51, 0.05) 1px, transparent 0)',
         backgroundSize: '40px 40px',
@@ -69,9 +69,9 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 p-8 grid grid-cols-12 gap-8 max-w-[1600px] mx-auto w-full">
+      <main className="flex-1 p-4 sm:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 max-w-[1600px] mx-auto w-full">
         {/* Left Panel: Player List */}
-        <section className="col-span-4 flex flex-col gap-6 border border-[#ea2a33]/10 p-6 rounded-xl bg-[#211111]/80 backdrop-blur-lg">
+        <section className="col-span-1 lg:col-span-4 flex flex-col gap-6 border border-[#ea2a33]/10 p-4 sm:p-6 rounded-xl bg-[#211111]/80 backdrop-blur-lg">
           <div className="flex items-center gap-3 border-b border-[#ea2a33]/20 pb-4">
             <span className="material-symbols-outlined text-[#ea2a33] text-3xl">groups</span>
             <h2 className="text-xl font-bold uppercase tracking-wide text-white">Danh sách người chơi</h2>
@@ -126,7 +126,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
         </section>
 
         {/* Middle Panel: Game Settings */}
-        <section className="col-span-4 flex flex-col gap-6 border border-[#ea2a33]/10 p-6 rounded-xl bg-[#211111]/80 backdrop-blur-lg">
+        <section className="col-span-1 lg:col-span-4 flex flex-col gap-6 border border-[#ea2a33]/10 p-4 sm:p-6 rounded-xl bg-[#211111]/80 backdrop-blur-lg">
           <div className="flex items-center gap-3 border-b border-[#ea2a33]/20 pb-4">
             <span className="material-symbols-outlined text-[#ea2a33] text-3xl">tune</span>
             <h2 className="text-xl font-bold uppercase tracking-wide text-white">Thiết lập thông số</h2>
@@ -170,7 +170,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
         </section>
 
         {/* Right Panel: Rules */}
-        <section className="col-span-4 flex flex-col gap-6 border border-[#ea2a33]/10 p-6 rounded-xl bg-[#211111]/80 backdrop-blur-lg overflow-hidden relative">
+        <section className="col-span-1 lg:col-span-4 flex flex-col gap-6 border border-[#ea2a33]/10 p-4 sm:p-6 rounded-xl bg-[#211111]/80 backdrop-blur-lg overflow-hidden relative">
           <div className="flex items-center gap-3 border-b border-[#ea2a33]/20 pb-4">
             <span className="material-symbols-outlined text-[#ea2a33] text-3xl">info</span>
             <h2 className="text-xl font-bold uppercase tracking-wide text-white">Quy tắc & Tư liệu</h2>
@@ -215,13 +215,13 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
       </main>
 
       {/* Footer */}
-      <footer className="w-full p-8 flex justify-center bg-gradient-to-t from-[#211111] via-[#211111]/90 to-transparent">
+      <footer className="w-full p-4 sm:p-8 flex justify-center bg-gradient-to-t from-[#211111] via-[#211111]/90 to-transparent sticky bottom-0 z-40">
         <button
-          className="group relative flex items-center justify-center gap-4 px-16 py-6 bg-[#ea2a33] rounded-xl border-2 border-[#d4af37] shadow-[0_0_40px_rgba(234,42,51,0.4)] hover:shadow-[0_0_60px_rgba(212,175,55,0.4)] transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="group relative flex items-center justify-center gap-3 sm:gap-4 px-8 sm:px-16 py-4 sm:py-6 bg-[#ea2a33] rounded-xl border-2 border-[#d4af37] shadow-[0_0_40px_rgba(234,42,51,0.4)] hover:shadow-[0_0_60px_rgba(212,175,55,0.4)] transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
           onClick={handleStart}
           disabled={players.length < 2}
         >
-          <span className="text-3xl font-black text-white tracking-[0.2em] uppercase">BẮT ĐẦU GAME</span>
+          <span className="text-xl sm:text-3xl font-black text-white tracking-[0.2em] uppercase">BẮT ĐẦU GAME</span>
           <span className="material-symbols-outlined text-3xl text-[#d4af37] group-hover:translate-x-2 transition-transform">play_circle</span>
           {/* Decorative Corners */}
           <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-[#d4af37]"></div>
